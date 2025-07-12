@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumple Andyy 🎂</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    body {
+      font-family: 'VT323', monospace;
+      background-color: #fbeaff;
+    }
+
+    .ventana-98 {
+      /* Aquí el apply para Tailwind */
+      @apply absolute bg-[#fff0fa] border w-[300px] p-3;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #333;
+      border-bottom: 2px solid #333;
+      box-shadow: 4px 4px 0 #ffb6f9;
+      /* Aseguramos una transición suave al cambiar el z-index si se desea, aunque para z-index no es tan efectivo */
+      transition: z-index 0s;
+    }
+
+    .barra-titulo {
+      @apply px-2 py-1 flex justify-between items-center text-sm font-bold text-white;
+      background-color: #c084fc;
+      border-bottom: 2px solid #a855f7;
+    }
+
+    .btn-98 {
+      @apply bg-[#ffe8fb] px-2 py-1 text-sm border text-black;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+    }
+
+    .btn-98:hover {
+      background-color: #ffd6f6;
+    }
+
+    .icono-carpeta {
+      @apply flex flex-col items-center cursor-pointer w-20;
+    }
+
+    .icono-carpeta img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .icono-carpeta span {
+      @apply text-xs text-black mt-1 text-center;
+    }
+  </style>
+</head>
+<body class="relative h-screen w-screen overflow-hidden">
+
+    <!-- 🎉 MENSAJE EN EL FONDO -->
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+    <h1 class="text-6xl md:text-7xl lg:text-8xl text-purple-700 text-center">
+      ¡Feliz Cumpleaños Andyy!
+    </h1>
+  </div>
+
+  <div class="absolute top-10 left-10 flex flex-col gap-6 z-10">
+    <div class="icono-carpeta" onclick="abrirVentana('carta1')">
+      <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="carta1" />
+      <span>Carta 1</span>
+    </div>
+    <div class="icono-carpeta" onclick="abrirVentana('galeria')">
+      <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="galeria" />
+      <span>Galería</span>
+    </div>
+    <div class="icono-carpeta" onclick="abrirVentana('carta2')">
+      <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="carta2" />
+      <span>Carta 2</span>
+    </div>
+    <div class="icono-carpeta" onclick="abrirVentana('despedida')">
+      <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="despedida" />
+      <span>Despedida</span>
+    </div>
+  </div>
+
+  <div id="carta1" class="absolute ventana-98 hidden top-12 left-40 z-40">
+    <div class="barra-titulo">
+      🎉 Carta para Andyy
+      <button class="btn-98" onclick="cerrarVentana('carta1')">✕</button>
+    </div>
+    <div class="mt-2 ml-2 mr-2 text-sm text-purple-900">
+      Que onda morrilla:<br><br>
+      Espero que te la pases super bien. <br>
+      Nunca me imagine que llegariamos a formar algo chilo 
+      Nunca imagine que podria confiar en alguien tan cabron <br>
+      como contigo despues de todo lo que me paso. Te agreadezco cada detalle que has tenido conmigo <br>
+      Te aprecio mucho te admiro y agreadezco a dios y a la vida por a verte puesto en mi vida porque eres mi apoyo <br>
+      Cuando todo el mundo esta en contra de mi eres la unica que esta ahí apoyandome en todo. <br>
+      Nunca habia hecho algo asi jajaja ni siquiera con las mujeres con las que estoy saliendo soy tan cursi como contigo jajaja <br>
+      <br>
+
+    </div>
+  </div>
+
+  <div id="galeria" class=" absolute ventana-98 hidden top-28 left-40 bg-pink-300 ">
+    <div class="barra-titulo">
+      🖼️ Galería
+      <button class="btn-98" onclick="cerrarVentana('galeria')">✕</button>
+    </div>
+    <div class="mt-2 text-sm text-purple-900 bg-pink-300">
+      <img src="foto1.jpeg" alt="Foto especial" class="mb-2 mt-2 ml-2 w-60 h-60 border border-purple-400 rounded-lg"/>
+      <p class="ml-2">Recuerdo que ese dia me sentia raro porque era volver hablarte despues de una pelea que tuvimos ✨</p>
+    </div>
+    <div class="mt-2 text-sm text-purple-900 bg-pink-300">
+      <img src="foto2.png" alt="Foto especial" class="mb-2 mt-2 ml-2 w-60 h-60 border border-purple-400 rounded-lg"/>
+      <p class="ml-2">Y se extraña ir al Chedraui a verte </p>
+    </div>
+  </div>
+
+  <div id="carta2" class=" absolute ventana-98 hidden top-36 left-60">
+    <div class="barra-titulo">
+      💌 Segunda Carta
+      <button class="btn-98" onclick="cerrarVentana('carta2')">✕</button>
+    </div>
+    <div class="mt-2 ml-2 mr-2 text-sm text-purple-900">
+      La verdad me sorprende mucho lo trabajadora y las ganas que le hechas a la vida apesar de los acotencimientos en tu vida <br>
+      Eres una gran mujer la verdad el hombre que llegue a tu vida <br>
+      se llevara a una gran mujer y me siento bien por tenerte como una gran amiga solo tu y yo sabemos que pedo <br>
+      Me esta constando un poco escribirte esto porque tengo mucho que no lo hago pero es el intento y pues bueno <br>
+      Que puedo decir si ya lo sabes todo estoy muy agradecido contigo y aunque te enojes conmigo, no quieras hablarme o no quieras saber de mi <br>
+      Ahí estare siempre, me sorprende machin como llegaste a mi familia nadie habia llegado asi jajaja al tanto de preocuparse mas por ti que por mi jajaj 
+    </div>
+  </div>
+
+  <div id="despedida" class="absolute ventana-98 hidden top-44 left-80">
+    <div class="barra-titulo">
+      🧸 Despedida Dulce
+      <button class="btn-98" onclick="cerrarVentana('despedida')">✕</button>
+    </div>
+    <div class="mt-2 ml-2 mr-2 text-sm text-purple-900">
+      Espero te guste esta carta medio rara pero muy a nuestro ambito jajaja <br>
+      Sabes que siempre estare para ti cuando me necesites y lo sabes <br>
+      Te quiero mucho muchas felicidades y sigue hechandole ganas luchando en tus metas y en cada logro ahi estare
+    </div>
+  </div>
+
+  <script>
+    function abrirVentana(id) {
+      const ventana = document.getElementById(id);
+      ventana.classList.remove('hidden');
+
+      // 1. Obtener todas las ventanas para poder bajar su z-index si es necesario
+      const todasLasVentanas = document.querySelectorAll('.ventana-98');
+
+      // 2. Iterar sobre todas las ventanas y establecer un z-index base (más bajo que el que será la activa)
+      //    Esto evita que una ventana cerrada permanezca con un z-index super alto
+      todasLasVentanas.forEach(v => {
+        // Establecemos un z-index base para las ventanas inactivas, digamos 100.
+        // Asegúrate de que este número sea más alto que el z-index de las carpetas (que es 10).
+        v.style.zIndex = 100;
+      });
+
+      // 3. Ahora, la ventana que se acaba de abrir recibe el z-index más alto.
+      //    Date.now() es excelente porque siempre te dará un número único y muy grande,
+      //    asegurando que esta ventana esté por encima de todas las demás (incluyendo las carpetas que tienen z-index: 10)
+      ventana.style.zIndex = Date.now();
+    }
+
+    function cerrarVentana(id) {
+      document.getElementById(id).classList.add('hidden');
+      // Opcional: podrías restablecer el z-index de esta ventana a un valor base al cerrarla
+      // document.getElementById(id).style.zIndex = 100;
+    }
+  </script>
+</body>
+</html>
